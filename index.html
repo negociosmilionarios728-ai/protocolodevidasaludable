@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo de Diabetes | Evaluación Gratuita</title>
+    <meta name="description" content="Aprende cómo eliminar el parásito diabético y controlar tu salud en 14 días.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- UTMify Scripts -->
+    <script>
+        window.pixelId = "69fcae169ffdca73c53b1a79";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+    </script>
+    <script
+        src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+        data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids
+        async
+        defer
+    ></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Header (Visible from Step 2 onwards) -->
+        <header id="main-header" style="display: none;">
+            <div class="logo" style="display: flex; justify-content: center; padding: 10px 0;">
+                <img src="logo_vida_saludable.png" alt="Protocolo de Vida Saludable"
+                    style="max-width: 220px; height: auto;">
+            </div>
+            <div class="progress-container">
+                <div id="progress" class="progress-bar"></div>
+            </div>
+        </header>
+
+        <!-- STEP 1: Landing -->
+        <div id="step-1" class="step active">
+            <h1>
+                <span class="highlight-black">URGENTE:</span>
+                <span class="highlight-green">EL TRUCO CASERO DE 14 DÍAS</span>
+                ESTÁ ELIMINANDO EL <span class="highlight-green">PARÁSITO DIABÉTICO</span>
+                Y ACABANDO CON LA DIABETES TIPO 2.
+            </h1>
+            <p class="sub-headline">
+                RESPONDÉ ESTE RÁPIDO TEST GRATUITO Y APRENDÉ CÓMO ELIMINAR ESTE PARÁSITO DE TU CUERPO Y LIBRARTE DE LA
+                DIABETES.
+            </p>
+
+            <div class="image-box">
+                <div class="image-grid">
+                    <img src="glucometer_comparison_1778067776634.png" alt="Comparación Glucómetros">
+                    <img src="woman_glucometer_1778068032277.png" alt="Persona midiendo azúcar">
+                </div>
+            </div>
+
+            <div class="image-box">
+                <div class="image-grid">
+                    <img src="parasite_microscope_1778067908496.png" alt="Parásito">
+                    <img src="glucometer_102.jpg" alt="Control de salud">
+                </div>
+            </div>
+
+            <button class="btn-main" onclick="nextStep(2)">¡QUIERO APRENDER TAMBIÉN!</button>
+        </div>
+
+        <!-- STEP 2: Gender Selection -->
+        <div id="step-2" class="step">
+            <h1>Vamos a iniciar tu evaluación</h1>
+            <p class="sub-headline">¡Seleccioná tu opción debajo!</p>
+
+            <div class="selection-grid">
+                <div class="card" onclick="nextStep(3)">
+                    <img src="man_avatar_smiling_1778068598363.png" alt="Hombre">
+                    <span>Soy Hombre</span>
+                </div>
+                <div class="card" onclick="nextStep(3)">
+                    <img src="woman_smiling.jpg" alt="Mujer">
+                    <span>Soy Mujer</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 3: Symptoms -->
+        <div id="step-3" class="step">
+            <h1>¿SENTÍS ALGUNO DE ESTOS SÍNTOMAS <span class="highlight-green">HACE MÁS DE 1 AÑO?</span></h1>
+
+            <div class="symptoms-container">
+                <img src="elderly_woman_symptoms_1778068341809.png" class="symptoms-img" alt="Síntomas">
+                <div class="symptom-tag" id="tag1">VISIÓN BORROSA</div>
+                <div class="symptom-tag" id="tag2">DOLORES EN LAS PIERNAS</div>
+                <div class="symptom-tag" id="tag3">SED EXCESIVA</div>
+                <div class="symptom-tag" id="tag4">HORMIGUEO</div>
+                <div class="symptom-tag" id="tag5">CANSANCIO</div>
+                <div class="symptom-tag" id="tag6">INSOMNIO</div>
+                <div class="symptom-tag" id="tag7">NÁUSEAS Y VÓMITOS</div>
+                <div class="symptom-tag" id="tag8">FATIGA</div>
+            </div>
+
+            <button class="btn-option" onclick="nextStep(4)">Siento más de 1 🤒</button>
+            <button class="btn-option" onclick="nextStep(4)">Siento 2 o más 🤪</button>
+        </div>
+
+        <!-- STEP 4: Parasite History -->
+        <div id="step-4" class="step">
+            <h1>¿Alguna vez te <span class="highlight-green">desparasitaste</span> de alguna manera?</h1>
+            <p class="sub-headline">Utilizando remedios o formas naturales.</p>
+
+            <button class="btn-option" onclick="nextStep(5)">
+                <span>😳</span> No, nunca me desparasité.
+            </button>
+            <button class="btn-option" onclick="nextStep(5)">
+                <span>😁</span> Sí, ya me desparasité.
+            </button>
+        </div>
+
+        <!-- STEP 5: News Urgency -->
+        <div id="step-5" class="step">
+            <div class="news-alert">
+                <p>Si nunca hiciste una Desparasitación Natural, <span
+                        style="text-decoration: underline;">cuidado:</span> los parásitos pueden multiplicarse en tu
+                    cuerpo y alcanzar órganos vitales como cerebro, corazón y pulmones. ¡No ignores este riesgo, es
+                    esencial desparasitarse al menos una vez al año!</p>
+            </div>
+
+            <p class="sub-headline" style="color: blue; text-decoration: underline;">Mirá esta Noticia de Infobae 👇</p>
+
+            <div class="news-box">
+                <div class="news-source">
+                    <span>infobae.com</span>
+                    <span>CIENCIA Y SALUD</span>
+                </div>
+                <h2 class="news-headline">Joven muere tras descubrir parásitos en su cerebro</h2>
+                <p class="news-sub">Buscó ayuda médica después de tener convulsiones y dolores. El diagnóstico llegó
+                    después de una resonancia: neurocisticercosis.</p>
+
+                <div class="news-social">
+                    <div class="social-icon">F</div>
+                    <div class="social-icon">W</div>
+                    <div class="social-icon">S</div>
+                </div>
+
+                <div class="single-image" style="margin-bottom: 15px;">
+                    <img src="mri_brain_parasites_1778068424339.png" alt="MRI Cerebro">
+                </div>
+
+                <div class="news-content">
+                    <p>El diagnóstico fue neurocisticercosis, una enfermedad parasitaria que afecta al cerebro y es
+                        causada por la ingestión de huevos de tenia...</p>
+                    <p>Después de ser ingeridos, los huevos dan origen a larvas que pueden instalarse en diversas partes
+                        del cuerpo, incluyendo los tejidos musculares y cerebrales.</p>
+                </div>
+            </div>
+
+            <button class="btn-main" onclick="nextStep(6)">¡Continuar!</button>
+        </div>
+
+        <!-- STEP 6: Awareness -->
+        <div id="step-6" class="step">
+            <h1>¿Sos consciente de que la <span class="highlight-green">falta de cuidados</span> en este tema puede
+                empeorar tu diabetes y dejar secuelas que pueden ser irreversibles?</h1>
+            <p class="sub-headline">Por favor, sé sincero.</p>
+
+            <button class="btn-option" onclick="nextStep(7)">
+                <span>😔</span> Sí, sé lo grave que es tener parásitos habitando en mi intestino.
+            </button>
+            <button class="btn-option" onclick="nextStep(7)">
+                <span>😰</span> No sabía que era tan grave, pero quiero cuidarme.
+            </button>
+        </div>
+
+        <!-- STEP 7: Blame & Inflammation -->
+        <div id="step-7" class="step">
+            <h1>¿Estás de acuerdo conmigo en que la mayoría de las veces el consumo <span
+                    class="highlight-green">Exagerado de Dulces</span> y la mala alimentación no es culpa nuestra?</h1>
+            <p class="sub-headline">Nos tachan de desequilibrados, pero eso se debe a que nuestro organismo está
+                inflamado por culpa de los parásitos intestinales.</p>
+            <p class="sub-headline"><i>Por favor, sé sincero/a, ¡quiero ayudar!</i></p>
+
+            <button class="btn-option" onclick="nextStep(8)">¡Sí, estoy de acuerdo!</button>
+            <button class="btn-option" onclick="nextStep(8)">De acuerdo en parte.</button>
+        </div>
+
+        <!-- STEP 8: Multi-select Symptoms -->
+        <div id="step-8" class="step">
+            <h1>Dentro de los <span class="highlight-green">síntomas listados debajo</span>, ¿cuáles son los que más te
+                molestan?</h1>
+            <p class="sub-headline">Seleccioná uno o más.</p>
+
+            <div class="checklist">
+                <div class="check-item" onclick="toggleCheck(this)">
+                    <div class="bullet">•</div>
+                    <span>INSOMNIO</span>
+                </div>
+                <div class="check-item" onclick="toggleCheck(this)">
+                    <div class="bullet">•</div>
+                    <span>FATIGA</span>
+                </div>
+                <div class="check-item" onclick="toggleCheck(this)">
+                    <div class="bullet">•</div>
+                    <span>SED EXCESIVA</span>
+                </div>
+                <div class="check-item" onclick="toggleCheck(this)">
+                    <div class="bullet">•</div>
+                    <span>HORMIGUEO</span>
+                </div>
+                <div class="check-item" onclick="toggleCheck(this)">
+                    <div class="bullet">•</div>
+                    <span>VISIÓN BORROSA</span>
+                </div>
+                <div class="check-item" onclick="toggleCheck(this)">
+                    <div class="bullet">•</div>
+                    <span>DOLORES EN EL CUERPO</span>
+                </div>
+            </div>
+
+            <button class="btn-main" onclick="validateStep8()">Continuar</button>
+        </div>
+
+        <!-- STEP 9: Life Impact -->
+        <div id="step-9" class="step">
+            <h1>¿Los síntomas que seleccionaste están <span class="highlight-green">afectando tu vida?</span></h1>
+
+            <button class="btn-option" onclick="nextStep(10)">
+                <span>✅</span> ¡Sí, muchísimo!
+            </button>
+            <button class="btn-option" onclick="nextStep(10)">
+                <span>😅</span> Sí, es tan normal en mi vida que ya hasta me acostumbré.
+            </button>
+            <button class="btn-option" onclick="nextStep(10)">
+                <span>🧐</span> Si no lo hubieras dicho, ni sabría que podría ser una parasitosis.
+            </button>
+            <button class="btn-option" onclick="nextStep(10)">
+                <span>😌</span> No me afecta, no.
+            </button>
+        </div>
+
+        <!-- STEP 10: Audio & Results -->
+        <div id="step-10" class="step">
+            <div class="alert-box">
+                <div class="alert-header">⚠️ Los Resultados No Mienten:</div>
+                <p>Tus síntomas indican algo muy peligroso - <span style="text-decoration: underline;">Escuchá con
+                        atención</span></p>
+            </div>
+
+            <p class="sub-headline" style="font-weight: 800; margin-top: 20px;">Escuchá esta rápida explicación 👇</p>
+            <p class="sub-headline" style="font-size: 12px;">Caso el audio no inicie, ¡solo hacé clic en él!</p>
+
+            <!-- Audio Player UI -->
+            <div class="audio-player" onclick="toggleAudio('audio1', this)">
+                <audio id="audio1" src="audio 1.mp3"></audio>
+                <div class="audio-header">
+                    <img src="dra_martina.jpg" alt="Dra. Martina" class="audio-avatar">
+                    <div class="audio-info">
+                        <span class="audio-name">Dra. Martina García</span>
+                    </div>
+                </div>
+                <div class="audio-controls">
+                    <div class="play-btn">▶</div>
+                    <div class="audio-wave">
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                    </div>
+                    <span class="audio-time">00:40</span>
+                </div>
+            </div>
+
+            <p class="sub-headline" style="font-weight: 800; margin-top: 30px;">Mirá este caso</p>
+            <p class="sub-headline">1 semana después de iniciar la desparasitación</p>
+
+            <div class="single-image">
+                <img src="glucometer_comparison_1778067776634.png" alt="Antes y Después">
+            </div>
+
+            <!-- Testimonial -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="rita_testimonial.jpg" alt="Rita" class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <span class="testimonial-name">Rita Giménez</span>
+                        <span class="testimonial-location">Buenos Aires, AR</span>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    Muchas gracias Martina, ya me estoy desparasitando hace 30 días, y mis niveles de glucosa están
+                    estables, estoy muy feliz por esta victoria en mi vida 😭🙌🏼🙏🏼 gracias, fuiste un ángel.
+                </p>
+            </div>
+
+            <button class="btn-main" onclick="nextStep(11)">Continuar</button>
+        </div>
+
+        <!-- STEP 11: Interest -->
+        <div id="step-11" class="step">
+            <h1>¿Tendrías interés en recibir un <span class="highlight-green">protocolo personalizado</span> para
+                Desparasitación en 14 días?</h1>
+
+            <button class="btn-option" onclick="nextStep(12)">
+                <span>✅</span> ¡Sí, lo quiero muchísimo!
+            </button>
+            <button class="btn-option" onclick="nextStep(12)">
+                <span>🤩</span> Tengo interés, pero quiero sacarme dudas.
+            </button>
+        </div>
+
+        <!-- STEP 12: Medications -->
+        <div id="step-12" class="step">
+            <h1>¿Estás utilizando alguno de estos <span class="highlight-green">medicamentos</span> actualmente?</h1>
+
+            <div class="medication-list">
+                <button class="btn-med" onclick="toggleMed(this)">Metformina</button>
+                <button class="btn-med" onclick="toggleMed(this)">Glifage</button>
+                <button class="btn-med" onclick="toggleMed(this)">Glicazida</button>
+                <button class="btn-med" onclick="toggleMed(this)">Glimepirida</button>
+                <button class="btn-med" onclick="toggleMed(this)">Insulina</button>
+                <button class="btn-med" onclick="toggleMed(this)">Uso otros medicamentos</button>
+                <button class="btn-med" onclick="toggleMed(this)">No uso nada por el momento</button>
+            </div>
+
+            <button class="btn-main" onclick="validateStep12()">Continuar</button>
+        </div>
+
+        <!-- STEP 13: Monitoring Frequency -->
+        <div id="step-13" class="step">
+            <h1>¿Con qué frecuencia realizás el <span class="highlight-green">monitoreo</span> de tu glucosa?</h1>
+
+            <button class="btn-option" onclick="nextStep(14)">
+                SIEMPRE ANTES DE COMER <span>⚠️</span>
+            </button>
+            <button class="btn-option" onclick="nextStep(14)">
+                UMA VEZ AL DÍA <span>✅</span>
+            </button>
+            <button class="btn-option" onclick="nextStep(14)">
+                VARIAS VECES AL DÍA <span>😰</span>
+            </button>
+            <button class="btn-option" onclick="nextStep(14)">
+                ALGUNAS VECES A LA SEMANA <span>🩸</span>
+            </button>
+            <button class="btn-option" onclick="nextStep(14)">
+                TODAVÍA NO LO HAGO <span>😐</span>
+            </button>
+        </div>
+
+        <!-- STEP 14: Health Importance -->
+        <div id="step-14" class="step">
+            <h1>¿Estás de acuerdo conmigo en que nuestra <span class="highlight-green">salud</span> es nuestro bien más
+                importante?</h1>
+            <p class="sub-headline">Sin ella no somos nada.</p>
+
+            <button class="btn-option" onclick="nextStep(15)">
+                <span>✅</span> ¡De acuerdo!
+            </button>
+            <button class="btn-option" onclick="nextStep(15)">
+                <span>🤨</span> No estoy de acuerdo.
+            </button>
+        </div>
+
+        <!-- STEP 15: Commitment -->
+        <div id="step-15" class="step">
+            <h1>¿Te comprometés a seguir nuestro <span class="highlight-green">Protocolo de 14 Días</span> en Casa?</h1>
+            <p class="sub-headline">Voy a ayudarte en todo lo que necesites.</p>
+
+            <button class="btn-option" onclick="nextStep(16)">
+                <span>🤩</span> ¡Sí, me comprometo!
+            </button>
+            <button class="btn-option" onclick="nextStep(16)">
+                <span>😃</span> ¡Voy a intentarlo!
+            </button>
+
+            <!-- Small Image Carousel for Social Proof -->
+            <div class="mini-carousel">
+                <div class="carousel-track">
+                    <img src="carousel_1.jpg" alt="Resultado 1">
+                    <img src="carousel_2.jpg" alt="Resultado 2">
+                    <img src="carousel_3.jpg" alt="Resultado 3">
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 16: Second Audio & Proof -->
+        <div id="step-16" class="step">
+            <h1>Escuchá el <span class="highlight-green">audio</span> debajo: 👇</h1>
+            <p class="sub-headline">Caso el audio no inicie, ¡solo hacé clic en él!</p>
+
+            <div class="audio-player" onclick="toggleAudio('audio2', this)">
+                <audio id="audio2" src="audio2.mp3"></audio>
+                <div class="audio-header">
+                    <img src="dra_martina.jpg" alt="Dra. Martina" class="audio-avatar">
+                    <div class="audio-info">
+                        <span class="audio-name">Dra. Martina García</span>
+                    </div>
+                </div>
+                <div class="audio-controls">
+                    <div class="play-btn">▶</div>
+                    <div class="audio-wave">
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                    </div>
+                    <span class="audio-time">00:28</span>
+                </div>
+            </div>
+
+            <div class="proof-container">
+                <div class="proof-item">
+                    <span class="proof-label">antes de desparasitar</span>
+                    <img src="proof_292.jpg" alt="Antes">
+                </div>
+                <div class="proof-item">
+                    <span class="proof-label green">14 días después de desparasitar</span>
+                    <img src="proof_98.jpg" alt="Después">
+                </div>
+            </div>
+
+            <button class="btn-main" onclick="startLoading()">¡Generar Protocolo Personalizado! ✅</button>
+        </div>
+
+        <!-- STEP 17: Loading Analysis -->
+        <div id="step-17" class="step">
+            <div class="loading-box">
+                <div class="loading-content"
+                    style="overflow: hidden; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <img src="loading_image.jpg" alt="Analizando..."
+                        style="width: 136%; margin-left: -18%; margin-top: -8%; margin-bottom: -8%; display: block;">
+                </div>
+
+                <div class="loading-bars">
+                    <div class="loading-bar-wrapper">
+                        <div class="bar-info"><span>Armando protocolo personalizado</span> <span id="percent1">0%</span>
+                        </div>
+                        <div class="bar-bg">
+                            <div id="bar1" class="bar-fill"></div>
+                        </div>
+                    </div>
+                    <div class="loading-bar-wrapper">
+                        <div class="bar-info"><span>Estamos analizando tus respuestas</span> <span
+                                id="percent2">0%</span></div>
+                        <div class="bar-bg">
+                            <div id="bar2" class="bar-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 18: Result Analysis -->
+        <div id="step-18" class="step">
+            <!-- Comparison Table -->
+            <div class="comparison-table">
+                <div class="comp-col">
+                    <div class="comp-header red">❌ Remedios</div>
+                    <ul>
+                        <li>❌ No termina de una vez con la diabetes</li>
+                        <li>❌ No elimina ni el 50% de los parásitos</li>
+                        <li>❌ Hacen mucho daño a tus órganos</li>
+                        <li>❌ Destruye tu intestino</li>
+                    </ul>
+                </div>
+                <div class="comp-col">
+                    <div class="comp-header green">✅ Nuestro Protocolo</div>
+                    <ul>
+                        <li>✅ Acabá con la diabetes en 14 días</li>
+                        <li>✅ Elimina más de 100 parásitos</li>
+                        <li>✅ Es 100% Natural</li>
+                        <li>✅ Receta simple y fácil de hacer</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="sub-headline" style="margin-top: 20px;">Debajo está el análisis de tu situación actual, <span
+                    class="highlight-green">basado en tus respuestas.</span> 👇</p>
+
+            <!-- Charts -->
+            <div class="charts-container">
+                <div class="chart-item">
+                    <div class="chart-label">Chances de tener parásitos en el organismo <span class="val">98%</span>
+                    </div>
+                    <div class="chart-bg">
+                        <div class="chart-fill red" style="width: 98%;"></div>
+                    </div>
+                </div>
+                <div class="chart-item">
+                    <div class="chart-label">Riesgo de vida <span class="val">68%</span></div>
+                    <div class="chart-bg">
+                        <div class="chart-fill orange" style="width: 68%;"></div>
+                    </div>
+                </div>
+                <div class="chart-item">
+                    <div class="chart-label">Chances de contraer enfermedades autoinmunes <span class="val">77%</span>
+                    </div>
+                    <div class="chart-bg">
+                        <div class="chart-fill red" style="width: 77%;"></div>
+                    </div>
+                </div>
+                <div class="chart-item">
+                    <div class="chart-label">Chances de Desparasitación <span class="val">100%</span></div>
+                    <div class="chart-bg">
+                        <div class="chart-fill green" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="chart-item">
+                    <div class="chart-label">Chances de eliminar la Diabetes por completo <span class="val">100%</span>
+                    </div>
+                    <div class="chart-bg">
+                        <div class="chart-fill green" style="width: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="sub-headline" style="font-weight: 800; color: #76b018; margin-top: 30px;">Posible agente
+                parasitario de acuerdo con tus síntomas:</p>
+            <p class="sub-headline" style="text-decoration: underline; font-style: italic;">Ascaris lumbricoides</p>
+
+            <div class="image-box">
+                <img src="parasite_microscope_1778067908496.png" alt="Parásito Intestinal" style="width: 100%;">
+            </div>
+
+            <div class="alert-box"
+                style="background: #fff; border: 1px solid #ddd; color: #333; text-align: left; margin-top: 20px;">
+                <p><strong>⚠️ ¡Atención!</strong></p>
+                <p style="font-size: 12px; margin-top: 5px;">En nuestro Protocolo, podés quedarte tranquilo: <span
+                        style="color: #76b018; font-weight: 700;">Ningún gusano o parásito saldrá vivo</span> de forma
+                    incómoda. Son eliminados ya muertos y desechos, casi imperceptibles. 😍</p>
+            </div>
+
+            <p class="sub-headline" style="margin-top: 30px; font-weight: 700;">La Desparasitación ocurrirá primero a
+                través de un <span class="highlight-green">licuado de palta</span> con un ingrediente secreto fácilmente
+                encontrado en los mercados y poco utilizado.</p>
+
+            <div class="image-box">
+                <img src="avocado_recipe.jpg" alt="Licuado de Palta" style="width: 100%;">
+            </div>
+
+            <button class="btn-main" onclick="nextStep(19)">¡Generar Protocolo de Tratamiento! ✅</button>
+        </div>
+
+        <!-- STEP 19: Sales Page (Offer) -->
+        <div id="step-19" class="step">
+            <div class="offer-header">
+                <p>🎖️ Protocolo <span style="text-decoration: underline; font-weight: 800;">Generado con ÉXITO!</span>
+                </p>
+            </div>
+
+            <div class="protocol-ready-card">
+                <h2>Tu protocolo</h2>
+                <div class="exclusive-badge">¡Exclusivo está listo!</div>
+            </div>
+
+            <div class="comparison-avatars">
+                <div class="avatar-box">
+                    <img src="antes_man.jpg" alt="Antes">
+                    <div class="bar-mini gray"></div>
+                </div>
+                <div class="avatar-box">
+                    <img src="despues_man.jpg" alt="Después">
+                    <div class="bar-mini green"></div>
+                </div>
+            </div>
+
+            <p class="sub-headline" style="margin-top: 30px;">Escuchá el Audio, te voy a explicar <span
+                    class="highlight-green">cómo funciona el Protocolo de diabetes.</span> 👇</p>
+
+            <div class="audio-player" onclick="toggleAudio('audio3', this)">
+                <audio id="audio3" src="audio3.mp3"></audio>
+                <div class="audio-header">
+                    <img src="dra_martina.jpg" alt="Dra. Martina" class="audio-avatar">
+                    <div class="audio-info">
+                        <span class="audio-name">Dra. Martina García</span>
+                    </div>
+                </div>
+                <div class="audio-controls">
+                    <div class="play-btn">▶</div>
+                    <div class="audio-wave">
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                    </div>
+                    <span class="audio-time">00:26</span>
+                </div>
+            </div>
+
+            <!-- What you will receive -->
+            <div class="receive-box">
+                <div class="receive-header-img" style="text-align: center; margin-bottom: 20px;">
+                    <img src="logo_receive_box.png" alt="Protocolo Vida Saludable"
+                        style="max-width: 280px; height: auto;">
+                </div>
+                <h4 style="margin: 15px 0;">Todo lo que vas a recibir</h4>
+
+                <ul class="receive-list">
+                    <li>✅ Preparación para desparasitación - $12</li>
+                    <li>✅ Desparasitación completa - $18</li>
+                    <li>✅ Guía alimentaria contra parásitos - $13</li>
+                    <li>✅ Además recibirás 3 protocolos bonus exclusivos - $10</li>
+                </ul>
+
+                <div class="price-box">
+                    <p class="old-price">Valor total: $53</p>
+                    <p class="new-price-label">Por apenas</p>
+                    <div class="main-price">
+                        <span class="currency">$</span>
+                        <span class="integer">6</span>
+                        <span class="cents">,90</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-main checkout-btn" onclick="goToCheckout()">Acceder a mi Protocolo Ahora! 🛒</button>
+
+            <p class="sub-headline" style="font-size: 10px; margin-top: 10px;">💳 Pago Único (Sin mensualidades)</p>
+            <p class="sub-headline" style="font-size: 10px;">🚀 Acceso Inmediato después del pago</p>
+
+            <!-- Guarantee -->
+            <div class="guarantee-image-container" style="text-align: center; margin: 20px 0;">
+                <img src="guarantee_7_days.png" alt="Garantía 7 Días"
+                    style="width: 100%; max-width: 500px; height: auto;">
+            </div>
+
+            <!-- YouTube Video Placeholder -->
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <div class="play-icon">▶</div>
+                    <p>Testimonio de Paciente</p>
+                </div>
+            </div>
+
+            <!-- Final Testimonial -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="alejandro_testimonial.jpg" alt="Alejandro" class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <span class="testimonial-name">Alejandro Gómez</span>
+                        <span class="testimonial-location">Buenos Aires, Argentina</span>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    Muchas gracias Martina, hice todo como me dijiste y ya hace 3 meses que no tomo ningún medicamento
+                    más. Estoy libre de la diabetes y mucho más saludable.
+                </p>
+            </div>
+
+            <button class="btn-main checkout-btn" onclick="goToCheckout()">Acceder a mi Protocolo Ahora! 🛒</button>
+
+            <div class="access-graphic-container" style="text-align: center; margin: 30px 0;">
+                <img src="access_graphic.jpg" alt="Acceso Inmediato y Seguro"
+                    style="width: 100%; max-width: 500px; height: auto; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            </div>
+
+            <button class="btn-main checkout-btn" onclick="goToCheckout()" style="margin-bottom: 50px;">Acceder a mi
+                Protocolo Ahora! 🛒</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
