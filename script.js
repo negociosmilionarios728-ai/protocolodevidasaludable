@@ -108,8 +108,7 @@ function finish() {
 }
 
 function goToCheckout() {
-    alert("¡Redirigiendo al checkout seguro!");
-    // window.location.href = "YOUR_CHECKOUT_URL";
+    window.location.href = "https://zuckpay.com.br/checkout/protocolo-de-vida-saludable";
 }
 
 function toggleCheck(el) {
