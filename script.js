@@ -3,10 +3,10 @@ let currentStep = 1;
 function nextStep(step) {
     // Hide current step
     document.getElementById(`step-${currentStep}`).classList.remove('active');
-    
+
     // Update current step
     currentStep = step;
-    
+
     // Show next step
     const nextStepEl = document.getElementById(`step-${currentStep}`);
     if (nextStepEl) {
@@ -49,7 +49,7 @@ function updateProgress() {
         18: 90,
         19: 100
     };
-    
+
     if (steps[currentStep]) {
         progressBar.style.width = steps[currentStep] + '%';
     }
@@ -59,7 +59,7 @@ function startLoading() {
     nextStep(17);
     let p1 = 0;
     let p2 = 0;
-    
+
     const interval = setInterval(() => {
         if (p1 < 100) {
             p1 += Math.floor(Math.random() * 5) + 1;
@@ -67,7 +67,7 @@ function startLoading() {
             document.getElementById('bar1').style.width = p1 + '%';
             document.getElementById('percent1').innerText = p1 + '%';
         }
-        
+
         if (p1 > 40 && p2 < 100) {
             p2 += Math.floor(Math.random() * 3) + 1;
             if (p2 > 100) p2 = 100;
@@ -108,7 +108,19 @@ function finish() {
 }
 
 function goToCheckout() {
-    window.location.href = "https://zuckpay.com.br/checkout/protocolo-de-vida-saludable";
+
+    // Dispara evento do Meta Pixel
+    if (typeof fbq !== 'undefined') {
+        fbq('track', 'InitiateCheckout');
+        console.log('InitiateCheckout disparado');
+    } else {
+        console.log('fbq não encontrado');
+    }
+
+    // Pequeno delay para garantir envio do evento
+    setTimeout(() => {
+        window.location.href = "https://zuckpay.com.br/checkout/protocolo-de-vida-saludable";
+    }, 300);
 }
 
 function toggleCheck(el) {
@@ -152,7 +164,7 @@ function initCarousel() {
     const track = document.querySelector('.carousel-track');
     const dots = document.querySelectorAll('.dot');
     const images = document.querySelectorAll('.carousel-track img');
-    
+
     if (!track || images.length === 0) return;
 
     function updateCarousel() {
