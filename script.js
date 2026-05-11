@@ -108,10 +108,14 @@ function finish() {
 }
 
 function goToCheckout() {
-    fbq('track', 'InitiateCheckout');
+    fbq('track', 'InitiateCheckout', {
+        content_name: 'Protocolo de Vida Saludable',
+        currency: 'USD',
+        value: 6.90
+    });
     setTimeout(() => {
         window.location.href = 'https://zuckpay.com.br/checkout/protocolo-de-vida-saludable';
-    }, 300);
+    }, 500);
 }
 
 function toggleCheck(el) {
