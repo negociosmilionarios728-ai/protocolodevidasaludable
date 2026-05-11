@@ -109,18 +109,22 @@ function finish() {
 
 function goToCheckout() {
 
-    // Dispara evento do Meta Pixel
+    // Dispara evento InitiateCheckout
     if (typeof fbq !== 'undefined') {
         fbq('track', 'InitiateCheckout');
-        console.log('InitiateCheckout disparado');
-    } else {
-        console.log('fbq não encontrado');
+        console.log('IC enviado');
     }
 
-    // Pequeno delay para garantir envio do evento
+    // Captura parâmetros da URL atual
+    const params = window.location.search;
+
+    // URL base do checkout
+    const checkoutUrl = "https://zuckpay.com.br/checkout/protocolo-de-vida-saludable";
+
+    // Redireciona preservando UTMs
     setTimeout(() => {
-        window.location.href = "https://zuckpay.com.br/checkout/protocolo-de-vida-saludable";
-    }, 300);
+        window.location.href = checkoutUrl + params;
+    }, 1000);
 }
 
 function toggleCheck(el) {
