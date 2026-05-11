@@ -115,7 +115,7 @@ function goToCheckout() {
             content_name: 'Protocolo de Vida Saludable',
             currency: 'USD',
             value: 6.90
-        });
+        }, { 'test_event_code': 'TEST73591' });
         console.log('Evento enviado para o Pixel.');
     }
 
