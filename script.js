@@ -144,7 +144,7 @@ window.goToCheckout = function () {
     console.log('Disparando InitiateCheckout...');
 
     const checkoutUrl = buildCheckoutUrl(
-        'https://zuckpay.com.br/checkout/protocolo-de-vida-saludable'
+        'https://www.zuckpay.com.br/checkout/protocolo-de-vida-saludable'
     );
 
     const buttons = document.querySelectorAll('.checkout-btn');
