@@ -139,7 +139,7 @@ function buildCheckoutUrl(baseUrl) {
     return url.toString();
 }
 
-function goToCheckout() {
+window.goToCheckout = function () {
 
     console.log('Disparando InitiateCheckout...');
 
