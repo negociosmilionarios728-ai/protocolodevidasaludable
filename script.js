@@ -140,6 +140,7 @@ function buildCheckoutUrl(baseUrl) {
 }
 
 function goToCheckout() {
+
     console.log('Disparando InitiateCheckout...');
 
     const checkoutUrl = buildCheckoutUrl(
@@ -154,12 +155,10 @@ function goToCheckout() {
         btn.style.pointerEvents = 'none';
     });
 
-    // Dispara evento do Meta Pixel
     if (typeof fbq !== 'undefined') {
 
         fbq('track', 'InitiateCheckout', {
             content_name: 'Protocolo de Vida Saludable',
-            content_category: 'Diabetes',
             currency: 'BRL',
             value: 6.90
         });
@@ -167,13 +166,14 @@ function goToCheckout() {
         console.log('InitiateCheckout enviado.');
 
     } else {
-        console.log('fbq não encontrado.');
+
+        console.log('Pixel não encontrado.');
+
     }
 
-    // Delay MAIOR para garantir envio do evento
     setTimeout(() => {
         window.location.href = checkoutUrl;
-    }, 3000);
+    }, 800);
 }
 
 
