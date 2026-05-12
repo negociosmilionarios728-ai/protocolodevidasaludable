@@ -107,38 +107,69 @@ function finish() {
     // Here you would redirect to the next part of the funnel
 }
 
+function buildCheckoutUrl(baseUrl) {
+    const url = new URL(baseUrl);
+
+    const params = [
+        "utm_source",
+        "utm_campaign",
+        "utm_medium",
+        "utm_content",
+        "utm_term",
+        "utm_id",
+        "fbclid",
+        "fbc",
+        "fbp",
+        "src",
+        "sck",
+        "xcod",
+        "ttclid"
+    ];
+
+    const currentParams = new URLSearchParams(window.location.search);
+
+    params.forEach(param => {
+        const value = currentParams.get(param);
+
+        if (value) {
+            url.searchParams.set(param, value);
+        }
+    });
+
+    return url.toString();
+}
+
 function goToCheckout() {
-    console.log('Disparando rastreamento de checkout...');
-    
+    console.log('Disparando InitiateCheckout...');
+
     if (typeof fbq !== 'undefined') {
-        // Evento Padrão
+
         fbq('track', 'InitiateCheckout', {
             content_name: 'Protocolo de Vida Saludable',
-            currency: 'USD',
+            currency: 'BRL',
             value: 6.90
-        }, { 'test_event_code': 'TEST73591' });
+        });
 
-        // Evento Personalizado para confirmação
-        fbq('trackCustom', 'IC_Confirmacao_Manual', {
-            status: 'clicado'
-        }, { 'test_event_code': 'TEST73591' });
-
-        console.log('Eventos de checkout enviados.');
+        console.log('InitiateCheckout enviado.');
     }
 
-    // Feedback visual
     const buttons = document.querySelectorAll('.checkout-btn');
+
     buttons.forEach(btn => {
-        btn.innerText = 'Redirecionando... (Aguarde)';
+        btn.innerText = 'Redirecionando...';
         btn.style.opacity = '0.7';
         btn.style.pointerEvents = 'none';
     });
 
-    // Aguarda 2 segundos (Tempo máximo de segurança)
+    const checkoutUrl = buildCheckoutUrl(
+        'https://zuckpay.com.br/checkout/protocolo-de-vida-saludable'
+    );
+
     setTimeout(() => {
-        window.location.href = 'https://zuckpay.com.br/checkout/protocolo-de-vida-saludable';
-    }, 2000);
+        window.location.href = checkoutUrl;
+    }, 1500);
 }
+
 
 function toggleCheck(el) {
     el.classList.toggle('selected');
