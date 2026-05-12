@@ -142,16 +142,9 @@ function buildCheckoutUrl(baseUrl) {
 function goToCheckout() {
     console.log('Disparando InitiateCheckout...');
 
-    if (typeof fbq !== 'undefined') {
-
-        fbq('track', 'InitiateCheckout', {
-            content_name: 'Protocolo de Vida Saludable',
-            currency: 'BRL',
-            value: 6.90
-        });
-
-        console.log('InitiateCheckout enviado.');
-    }
+    const checkoutUrl = buildCheckoutUrl(
+        'https://zuckpay.com.br/checkout/protocolo-de-vida-saludable'
+    );
 
     const buttons = document.querySelectorAll('.checkout-btn');
 
@@ -161,14 +154,28 @@ function goToCheckout() {
         btn.style.pointerEvents = 'none';
     });
 
-    const checkoutUrl = buildCheckoutUrl(
-        'https://zuckpay.com.br/checkout/protocolo-de-vida-saludable'
-    );
+    // Dispara evento do Meta Pixel
+    if (typeof fbq !== 'undefined') {
 
+        fbq('track', 'InitiateCheckout', {
+            content_name: 'Protocolo de Vida Saludable',
+            content_category: 'Diabetes',
+            currency: 'BRL',
+            value: 6.90
+        });
+
+        console.log('InitiateCheckout enviado.');
+
+    } else {
+        console.log('fbq não encontrado.');
+    }
+
+    // Delay MAIOR para garantir envio do evento
     setTimeout(() => {
         window.location.href = checkoutUrl;
-    }, 1500);
+    }, 3000);
 }
+
 
 
 function toggleCheck(el) {
